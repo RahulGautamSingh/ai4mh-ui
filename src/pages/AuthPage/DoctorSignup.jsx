@@ -22,7 +22,7 @@ const DoctorSignup = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/doctor/register",
+        "/api/doctor/register",
         formData
       );
 

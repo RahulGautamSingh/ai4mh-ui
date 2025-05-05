@@ -28,7 +28,7 @@ const DoctorDashboard = () => {
     const fetchProfile = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/doctor/profile"
+          "/api/doctor/profile"
         );
         const data = response.data;
         setForms(data.forms || []);

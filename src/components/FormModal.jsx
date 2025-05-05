@@ -34,7 +34,7 @@ const FormModal = ({ onClose, addForm }) => {
     }
 
     try {
-      const res = await axios.post("http://localhost:8000/api/form/create", {
+      const res = await axios.post("/api/form/create", {
         patientId,
         type: formType,
       });
@@ -42,7 +42,7 @@ const FormModal = ({ onClose, addForm }) => {
       if (res.status === 201) {
         toast.success("Form created successfully");
         const formId = res.data.form.formId;
-        setFormLink(`http://localhost:5173/form/${formId}`);
+        setFormLink(`${import.meta.env.VITE_FRONTEND_BASE_URL}/form/${formId}`);
         addForm(res.data.form);
       } else {
         toast.error("Form not created");

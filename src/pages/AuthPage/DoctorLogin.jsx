@@ -16,7 +16,7 @@ const DoctorLogin = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/doctor/login",
+        "/api/doctor/login",
         formData
       );
 
