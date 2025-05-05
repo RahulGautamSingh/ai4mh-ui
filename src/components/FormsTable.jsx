@@ -80,17 +80,7 @@ const FormsTable = ({ forms }) => {
                     </button>
                   </td>
                   <td>
-                    <button
-                      onClick={() =>
-                        window.open(
-                          `/patient/${form.patient.identifier}`,
-                          "_blank"
-                        )
-                      }
-                      className="form-link"
-                    >
-                      {form.patient.identifier}
-                    </button>
+                    <button>{form.patient.identifier}</button>
                   </td>
                   <td>{form.type}</td>
                   <td>
@@ -103,7 +93,9 @@ const FormsTable = ({ forms }) => {
                     </span>
                   </td>
                   <td>{form.score}</td>
-                  <td>{form.submitted ? getAssessment(form.score, form.type): ''}</td>
+                  <td>
+                    {form.submitted ? getAssessment(form.score, form.type) : ""}
+                  </td>
                 </tr>
               ))}
             </tbody>

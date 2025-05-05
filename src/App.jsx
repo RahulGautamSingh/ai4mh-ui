@@ -3,7 +3,7 @@ import DoctorDashboard from "./pages/DoctorDashboard";
 import PatientDetails from "./pages/PatientDetails";
 import AuthPage from "./pages/AuthPage";
 import { ToastContainer } from "react-toastify";
-import FormPage from "./pages/formPage";
+import FormPage from "./pages/FormPage";
 
 export default function App() {
   return (
