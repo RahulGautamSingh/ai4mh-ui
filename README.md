@@ -14,11 +14,27 @@ You need to the following dependencies for local development:
 
 ## Fork and Clone
 
-You should first "fork" the main project using the GitHub website and then clone your fork locally.
+1. Fork this repository via the GitHub interface.
+2. Clone your forked repo:
 
-To ensure everything is working properly on your end, you must:
+```bash
+git clone https://github.com/<your-username>/ai4mh-ui.git
+cd ai4mh-ui
+```
+
+## Environment Setup
+
+1. Create a `.env` file in the root directory and add the following env variables:
+
+```ini
+VITE_API_BASE_URL=http://localhost:5000/api
+VITE_FRONTEND_BASE_URL=http://localhost:5173
+```
+
+!!!note Replace the values with your actual config.
+
+## Install & run
 
 1. Install dependencies with `npm install`
 2. Make build with `npm build`, should pass with no errors
-3. Create a `.env` file and define the variables `VITE_API_BASE_URL` and `VITE_FRONTEND_BASE_URL`
-4. Verify the installation by running `npm run dev`
+3. Verify the installation by running `npm run dev`
