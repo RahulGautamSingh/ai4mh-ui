@@ -138,13 +138,6 @@ export default function FormPage() {
                 </div>
               </div>
             )}
-
-            {/* Submit Button */}
-            {!isSubmitted && !isDoctor && (
-              <button className="submit-btn" onClick={handleSubmit}>
-                Submit
-              </button>
-            )}
           </div>
 
           <div className="form-left">
@@ -190,6 +183,12 @@ export default function FormPage() {
           </div>
         </>
       )}
+       {/* Submit Button */}
+       {!loading && !isSubmitted && !isDoctor && (
+              <button className="submit-btn" onClick={handleSubmit}>
+                Submit
+              </button>
+            )}
     </div>
   );
 }
